@@ -9,7 +9,7 @@ namespace UserAuthenticationAPI.Controllers
     [Route("api/[controller]")]
     public class UsersController : ControllerBase 
     {
-        private UsersRepository _usersRepo;
+        private readonly UsersRepository _usersRepo;
         public UsersController(UsersRepository usersRepository)
         {
             this._usersRepo = usersRepository;

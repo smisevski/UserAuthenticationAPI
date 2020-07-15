@@ -22,6 +22,10 @@ namespace UserAuthenticationAPI.Models
         public string Password { get; set; }
 
         [Column(TypeName = "varchar(MAX)")]
+        [Required(ErrorMessage = "Email address must be provided.")]
+        public string Email { get; set; }
+
+        [Column(TypeName = "varchar(MAX)")]
         [Required(ErrorMessage = "Firstname must be provided.")]
         [StringLength(20, ErrorMessage = "Firstname can't be longer than 20 characters.")]
         public string Firstname { get; set; }

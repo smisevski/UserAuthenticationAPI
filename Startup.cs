@@ -35,6 +35,7 @@ namespace UserAuthenticationAPI
             services.AddDbContext<RepositoryContext>(o => o.UseMySql(Configuration.GetConnectionString("UsersContext")));
 
             services.AddScoped<UsersRepository>();
+            services.AddScoped<UserRolesRepository>();
 
             services.AddControllers().AddNewtonsoftJson(options =>
             options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
